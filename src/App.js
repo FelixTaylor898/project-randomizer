@@ -47,13 +47,20 @@ return (
   <div className="section randomized">
      <h2>Randomized Plan</h2>
       {randomPlan && (
-    <div className="randomPlan">
-      <p><b>Project:</b> {randomPlan.project}</p>
-      <p><b>Task:</b> {randomPlan.task}</p>
-      <p><b>Duration:</b> {randomPlan.time} minutes</p>
-    </div>
+        <div className="randomPlan">
+  <div className="randomPlanItem">
+    <b>Project:</b> <span>{randomPlan.project}</span>
+  </div>
+  <div className="randomPlanItem">
+    <b>Task:</b> <span>{randomPlan.task}</span>
+  </div>
+  <div className="randomPlanItem">
+    <b>Duration:</b> <span>{randomPlan.time} mins</span>
+  </div>
+</div>
+
   )}
-  <button className="functionButton" onClick={handleRandomize}>Randomize Plan</button>
+  <button className="functionButton mainButton" onClick={handleRandomize}>Randomize Plan</button>
 </div>
 
     <div className="section inputs">
