@@ -70,7 +70,7 @@ return (
 
         <div className="numInput">
           <label className="input-label">Min minutes:</label>
-          <input type="number" value={minTime} max={maxTime} onChange={(e)=> setMinTime(Number(e.target.value))}
+          <input type="number" value={minTime} min="0" max={maxTime} onChange={(e)=> setMinTime(Number(e.target.value))}
           className="input-field"
           />
         </div>
